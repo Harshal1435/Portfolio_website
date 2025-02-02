@@ -16,7 +16,7 @@ const Contact = () => {
     e.preventDefault();
     setStatus("Sending...");
     try {
-      await axios.post("http://localhost:5000/send", formData); // Update the URL if hosted
+      await axios.post("https://portfolio-website-bhrj.onrender.com/send", formData); // Update the URL if hosted
       setStatus("Your message has been sent successfully!");
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {
