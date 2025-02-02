@@ -28,13 +28,13 @@ const projectsData = [
     title: "E-commerce Website",
     description: "An e-commerce website created using HTML, CSS, and JavaScript.",
     image: "../assets/E-commerse.png",
-    link: "https://ecommercewebsite.com",
+    link: "https://harshal1435.github.io/E-commerce/E-commerce.html",
   },
   {
     title: "Filter Project",
     description: "A website that filters given products and displays search results.",
     image: "/placeholder.svg",
-    link: "https://filterproject.com",
+    link: "https://harshal1435.github.io/Filters/",
   },
   {
     title: "Resort Website",
