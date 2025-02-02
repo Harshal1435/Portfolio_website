@@ -25,7 +25,7 @@ app.post("/send", (req, res) => {
 
   const mailOptions = {
     from: email,
-    to: "your-email@gmail.com", // Replace with your email (the recipient)
+    to: "raghatateharshal4@gmail.com", // Ressssplace with your email (the recipient)
     subject: `New Message from ${name}`,
     text: `You have received a new message from your website's contact form:\n\nName: ${name}\nEmail: ${email}\nMessage:\n${message}`,
   };
