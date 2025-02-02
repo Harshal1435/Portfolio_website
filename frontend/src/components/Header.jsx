@@ -7,7 +7,7 @@ function Header({ darkMode, toggleDarkMode }) {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className="fixed w-full z-50 bg-background shadow-md">
+    <header className="fixed w-full z-150 bg-background shadow-md">
       <nav className="container mx-auto px-6 py-3 flex justify-between items-center">
         <Link to="/" className="text-xl font-bold text-primary">
           Harshal Raghatate
