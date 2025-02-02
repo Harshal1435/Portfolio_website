@@ -1,46 +1,52 @@
-import { motion } from "framer-motion"
-import { useState } from "react"
+import { motion } from "framer-motion";
+import { useState } from "react";
 
 const useImageLoader = (src) => {
-  const [loaded, setLoaded] = useState(false)
-  const [error, setError] = useState(false)
+  const [loaded, setLoaded] = useState(false);
+  const [error, setError] = useState(false);
 
-  const handleLoad = () => setLoaded(true)
-  const handleError = () => setError(true)
+  const handleLoad = () => setLoaded(true);
+  const handleError = () => setError(true);
 
-  return { loaded, error, handleLoad, handleError }
-}
+  return { loaded, error, handleLoad, handleError };
+};
 
 const projectsData = [
   {
     title: "Face Lock Website",
     description: "A website created with a 4-member team to replace password authentication with face lock.",
     image: "/placeholder.svg",
+    link: "https://facelockwebsite.com",
   },
   {
     title: "Weather Website",
     description: "A website that provides weather information for different countries.",
     image: "../assets/wether_app.png",
+    link: "https://weatherwebsite.com",
   },
   {
     title: "E-commerce Website",
     description: "An e-commerce website created using HTML, CSS, and JavaScript.",
     image: "../assets/E-commerse.png",
+    link: "https://ecommercewebsite.com",
   },
   {
     title: "Filter Project",
     description: "A website that filters given products and displays search results.",
     image: "/placeholder.svg",
+    link: "https://filterproject.com",
   },
   {
     title: "Resort Website",
     description: "A basic frontend website showcasing React.js functionality.",
     image: "/placeholder.svg",
+    link: "https://resortwebsite.com",
   },
-]
+];
 
 const ProjectCard = ({ project, index }) => {
-  const { loaded, error, handleLoad, handleError } = useImageLoader(project.image)
+  const { loaded, error, handleLoad, handleError } = useImageLoader(project.image);
+  const [showPreview, setShowPreview] = useState(false);
 
   return (
     <motion.div
@@ -53,6 +59,7 @@ const ProjectCard = ({ project, index }) => {
         className="w-full h-48 bg-muted relative overflow-hidden"
         initial={{ opacity: 0 }}
         animate={{ opacity: loaded ? 1 : 0 }}
+        onClick={() => setShowPreview(true)} // Show preview on click
       >
         <img
           src={project.image || "/placeholder.svg"}
@@ -70,11 +77,46 @@ const ProjectCard = ({ project, index }) => {
       </motion.div>
       <div className="p-6">
         <h3 className="text-xl font-semibold mb-2 text-card-foreground">{project.title}</h3>
-        <p className="text-muted-foreground">{project.description}</p>
+        <p className="text-muted-foreground mb-4">{project.description}</p>
+        <a
+          href={project.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary underline hover:text-primary-dark"
+        >
+          View Project
+        </a>
       </div>
+
+      {/* Preview Modal */}
+      {showPreview && (
+        <motion.div
+          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          onClick={() => setShowPreview(false)} // Close preview on overlay click
+        >
+          <div className="bg-white rounded-lg overflow-hidden shadow-lg w-3/4 max-w-2xl">
+            <img
+              src={project.image || "/placeholder.svg"}
+              alt={project.title}
+              className="w-full h-auto"
+            />
+            <div className="p-4 text-center">
+              <h3 className="text-xl font-semibold">{project.title}</h3>
+              <button
+                className="mt-4 bg-primary text-white px-4 py-2 rounded hover:bg-primary-dark"
+                onClick={() => setShowPreview(false)}
+              >
+                Close Preview
+              </button>
+            </div>
+          </div>
+        </motion.div>
+      )}
     </motion.div>
-  )
-}
+  );
+};
 
 const Projects = () => {
   return (
@@ -91,8 +133,7 @@ const Projects = () => {
         ))}
       </div>
     </motion.div>
-  )
-}
+  );
+};
 
-export default Projects
-
+export default Projects;
