@@ -35,7 +35,7 @@ function App() {
       >
         {/* Pass darkMode state and toggleDarkMode function to the Header */}
         <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-        <main className="flex-grow overflow-hidden z-10">
+        <main className=" overflow-hidden z-10">
           {/* Define routes for different components */}
           <Routes>
             <Route path="/" element={<Home />} />
