@@ -20,12 +20,12 @@ const projectsData = [
   {
     title: "Weather Website",
     description: "A website that provides weather information for different countries.",
-    image: "/assets/wether_app.png",
+    image: "../assets/wether_app.png",
   },
   {
     title: "E-commerce Website",
     description: "An e-commerce website created using HTML, CSS, and JavaScript.",
-    image: "/assets/E-commerse.png",
+    image: "../assets/E-commerse.png",
   },
   {
     title: "Filter Project",
