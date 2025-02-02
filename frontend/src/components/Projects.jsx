@@ -22,7 +22,7 @@ const projectsData = [
     title: "Weather Website",
     description: "A website that provides weather information for different countries.",
     image: "../assets/wether_app.png",
-    link: "https://weatherwebsite.com",
+    link: "https://harshal1435.github.io/Weather_website/",
   },
   {
     title: "E-commerce Website",
