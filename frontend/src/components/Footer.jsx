@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="bg-background py-8">
       <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
-        <p className="text-muted-foreground mb-4 md:mb-0">&copy; 2023 Harshal Raghatate. All rights reserved.</p>
+        <p className="text-muted-foreground mb-4 md:mb-0">&copy; 2025 Harshal Raghatate. All rights reserved.</p>
         <div className="flex space-x-4">
           <a
             href="https://github.com/Harshal1435"
