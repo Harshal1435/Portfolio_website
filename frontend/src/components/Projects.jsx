@@ -40,7 +40,7 @@ const projectsData = [
     title: "Resort Website",
     description: "A basic frontend website showcasing React.js functionality.",
     image: "/placeholder.svg",
-    link: "https://resortwebsite.com",
+    link: "https://sage-selkie-67928f.netlify.app/",
   },
 ];
 
