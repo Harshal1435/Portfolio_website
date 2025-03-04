@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import profilePic from "../assets/harshal_photo.png";
-import resumePDF   from "../assets/Hareshal_Raghatate_Resume.pdf"
+import resumePDF   from "../assets/Harshal_Raghatate_Resume.pdf"
 const Home = () => {
   const [text, setText] = useState("");
   const [name, setName] = useState("");
