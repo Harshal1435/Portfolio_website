@@ -10,39 +10,60 @@ const useImageLoader = (src) => {
 
   return { loaded, error, handleLoad, handleError };
 };
-
 const projectsData = [
   {
-    title: "Face Lock Website",
-    description: "A website created with a 4-member team to replace password authentication with face lock.",
-    image: "/placeholder.svg",
+    title: "Face Lock Authentication Website",
+    description:
+      "Developed a facial recognition-based login system using HTML, CSS, JavaScript, and OpenCV to replace traditional password authentication with webcam-based face verification.",
+    image: "/assets/facelock.png",
     link: "https://facelockwebsite.com",
   },
   {
-    title: "Weather Website",
-    description: "A website that provides weather information for different countries.",
-    image: "../assets/wether_app.png",
-    link: "https://harshal1435.github.io/Weather_website/",
+    title: "Admin Panel Dashboard",
+    description:
+      "Created a full-stack admin panel using React.js, Node.js, Express.js, and MongoDB to manage users, products, and orders with secure authentication and CRUD APIs.",
+    image: "/assets/admin_dashboard.png",
+    link: "https://bucolic-bunny-b0526e.netlify.app/auth",
   },
   {
-    title: "E-commerce Website",
-    description: "An e-commerce website created using HTML, CSS, and JavaScript.",
+    title: "Real-Time Chat Application",
+    description:
+      "Built a real-time messaging platform using React.js, Node.js, Express.js, Socket.io, and MongoDB with typing indicators, message history, and encryption via Crypto package.",
+    image: "/assets/chat_app.png",
+    link: "#",
+  },
+  {
+    title: "E-commerce Website (MERN Stack)",
+    description:
+      "Designed and deployed a scalable e-commerce platform using MongoDB, Express.js, React.js, and Node.js. Integrated payment gateway, RESTful APIs, and robust backend systems.",
     image: "../assets/E-commerse.png",
     link: "https://harshal1435.github.io/E-commerce/E-commerce.html",
   },
   {
-    title: "Filter Project",
-    description: "A website that filters given products and displays search results.",
-    image: "/placeholder.svg",
-    link: "https://harshal1435.github.io/Filters/",
-  },
-  {
-    title: "Resort Website",
-    description: "A basic frontend website showcasing React.js functionality.",
+    title: "Resort Booking Website",
+    description:
+      "Developed a React.js-based frontend for a resort booking site showcasing features, room details, and a visually appealing layout using reusable components.",
     image: "/placeholder.svg",
     link: "https://sage-selkie-67928f.netlify.app/",
   },
+
+  {
+    title: "Agency Website",
+    description:
+      "Collaborated on maintaining and improving a live LMS project during internship at Royals Web Technology, focusing on bug fixes, performance, and reliability.",
+    image: "/Portfolio_website/frontend/src/assets/AgencyWebsite.png",
+    link: "https://agencyagency.netlify.app/",
+  },
+    {
+    title: "Weather Website",
+    description:
+      "Created a responsive weather website using HTML, CSS, and JavaScript that fetches real-time weather data for various cities and countries.",
+    image: "../assets/wether_app.png",
+    link: "https://harshal1435.github.io/Weather_website/",
+  }
+
 ];
+
 
 const ProjectCard = ({ project, index }) => {
   const { loaded, error, handleLoad, handleError } = useImageLoader(project.image);

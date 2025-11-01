@@ -31,9 +31,7 @@ const About = () => {
           className="md:w-1/2"
         >
           <p className="mb-4 text-muted-foreground">
-            I'm a motivated Computer Engineering student with a strong foundation in web development and a passion for
-            creating user-friendly, responsive websites. Currently pursuing my B.Tech in Computer Engineering (RTMNU),
-            I'm in my 8th semester and eager to apply my skills in a professional setting.
+            I'm a motivated Computer Engineering graduate with a strong foundation in web development and a passion for creating user-friendly, responsive websites. I have recently completed my B.Tech in Computer Engineering (RTMNU) and am eager to apply my skills in a professional setting.
           </p>
           <p className="mb-4 text-muted-foreground">
             As a fresher, I'm excited about the opportunity to contribute to innovative web solutions and continue

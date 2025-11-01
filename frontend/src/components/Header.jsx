@@ -46,7 +46,8 @@ function Header({ darkMode, toggleDarkMode }) {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
-          className="md:hidden bg-background py-2"
+         className={`md:hidden ${darkMode ? "bg-gray-900 text-gray-100" : "bg-gray-100 text-gray-900"} py-2`}
+
         >
           <NavLink to="/" onClick={() => setIsOpen(false)}>
             Home
